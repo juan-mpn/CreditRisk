@@ -1,10 +1,10 @@
 # Predicting Credit Risk
 *Python* and Machine Learning: Using pandas and *Skikit-learn* to predict Credit Risk
 ML![alt text](https://thumbs.dreamstime.com/b/machine-learning-vector-banner-word-line-icon-machine-learning-vector-banner-word-line-icon-vector-background-117806401.jpg)
-
+***
 ## Background
 **Supervised Machine Learning** and Predicting Credit Risk, evaluating several machine learning models to assess credit risk, using data from LendingClub; a peer-to-peer lending services company.
-
+***
 ## Objectives
 The goals of this challenge are:
 
@@ -23,21 +23,73 @@ For each of the above you will find:
 2. Calculate the balanced accuracy score using balanced_accuracy_score from sklearn.metrics.
 3. Generate a confusion_matrix.
 4. Print the classification report (`classification_report_imbalanced from imblearn.metrics`).
-
+___
 ## Files / Target
 `../Resources/LoanStats_2019Q1.csv`
-
+___
 *`target = ["loan_status"]`*
 + Low Risk  68,470
 - High Risk    347
 
 Finding that the data from LendingClub it is imbalanced with 68,470 Low Risk applicants vs 347 High Risk we used Resampling Techniques and various Machine Learning models described below. This will help us further fine tune by training our machine learning models with balanced data. 
 
-## Machine Learning Models Analysis
-# Credit Risk Resampling using Naive Random Oversampling
+# Oversampling
+**Credit Risk Resampling using Naive Random Oversampling**
 + Low Risk  51,366
 - High Risk 51,366
 
-**Balanced Accuracy Score : 0.644711676499736**
+**Balanced Accuracy Score : 0.644**
+
+## Confusion Matrix
+                       Model Prediction 
+                    No Default   |  Default (1) |
+                        (0)      |              |
+---
+Actual              |             |             |
+Loan    no default  |   TN        |    FP       |
+Status      (0)     |             |             |
+---
+           default  |   FN        |    TP       |
+            (1)     |             |             |
+---
+TN = True Negative
+FP = False Positive
+FN = False Negative
+TP = True Positive
+
+From the confusion matrix results, we can see a large number of false positives (28),  which indicates and unreliable positive classification. The recall is also low high risk = 0.72 and low risk = 0.57 applications, which is indicative of the large number of false negatives. The F1 score is aslo low (0.72)
+
+**SMOTE Oversampling**
++ Low Risk:  51,366
+- High Risk: 51,366
+
+**Balanced Accuracy Score : 0.644**
+From the confusion matrix results, we can see a large number of false positives (37),  which indicates and unreliable positive classification. The recall is also low high risk = 0.63 and low risk = 0.69 applications, which is indicative of the large number of false negatives. The F1 score is aslo low (0.82) but **SMOTE F1 score 0.82  is better than Random Oversampling f1 0.72**
+
+**ClusterCentroids Undersampling**
++ Low Risk:  246
+- High Risk: 246
+
+**Balanced Accuracy Score : 0.533**
+From the confusion matrix results, we can see a large number of false positives (34),  which indicates and unreliable positive classification. The recall is also low high risk = 0.66 and low risk = 0.40 applications, which is indicative of the large number of false negatives. The F1 score is aslo low (0.52) but **SMOTE F1 score is also better than Undersampling**
+
+**SMOTEENN Combined Oversampling and Undersampling**
++ Low Risk:  68,460
+- High Risk: 62,011
+
+**Balanced Accuracy Score : 0.644**
+From the confusion matrix results, we can see a large number of false positives (28),  which indicates and unreliable positive classification. The recall is also low high risk = 0.72 and low risk = 0.57 applications, which is indicative of the large number of false negatives. The F1 score is aslo low (0.72) but **SMOTE F1 score 0.82  is also better than Combined Oversampling and Undersampling f1 0.72**
+
+## For this particular analysis after executing Random Sampler, SMOTE Oversampler, Custer Centroids Undersampler and SMOTEENN Combined Sampler we find SMOTE Oversampler as the best Machine Learning algorithm providing the better results. This will require further analysis and more data but it is looking very promising. 
+
+# Ensemble Learners
+**Balanced Random Forest Classifier**
++ Low Risk:  51,366
+- High Risk: 51,366
+
+**Balanced Accuracy Score : 0.650**
+From the confusion matrix results, we can see a large number of false positives (31),  which indicates and unreliable positive classification. The recall is also low high risk = 0.69 and low risk = 0.61 applications, which is indicative of the large number of false negatives. The F1 score is aslo low (0.76) but  **SMOTE F1 score 0.82 is also better than Random Forest 0.76**
+
+
 
 
