@@ -1,6 +1,6 @@
 # Predicting Credit Risk
 *Python* and Machine Learning: Using pandas and *Skikit-learn* to predict Credit Risk
-ML![alt text](https://images.app.goo.gl/Ysa1eRwakmhFK3229)
+ML![alt text](https://thumbs.dreamstime.com/b/machine-learning-vector-banner-word-line-icon-machine-learning-vector-banner-word-line-icon-vector-background-117806401.jpg)
 
 ## Background
 **Supervised Machine Learning** and Predicting Credit Risk, evaluating several machine learning models to assess credit risk, using data from LendingClub; a peer-to-peer lending services company.
