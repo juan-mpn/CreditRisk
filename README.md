@@ -26,6 +26,11 @@ For each of the above you will find:
 ___
 ## Files / Target
 `../Resources/LoanStats_2019Q1.csv`
+- credit_risk_ensemble-Challenge.ipynb
+https://github.com/juan-mpn/CreditRisk/blob/master/Notebook/credit_risk_ensemble-Challenge.ipynb
++ credit_risk_resampling-Challenge.ipynb
+https://github.com/juan-mpn/CreditRisk/blob/master/Notebook/credit_risk_resampling-Challenge.ipynb
+
 ___
 *`target = ["loan_status"]`*
 + Low-Risk  68,470
