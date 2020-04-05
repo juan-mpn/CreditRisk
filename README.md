@@ -41,9 +41,14 @@ Finding that the data from LendingClub is imbalanced with 68,470 Low-Risk applic
 **Balanced Accuracy Score: 0.644**
 
 ## Confusion Matrix
+---
+---
+**
+---
                        Model Prediction 
                     No Default   |  Default (1) |
                         (0)      |              |
+---
 Actual              |             |             |
 Loan    no default  |   TN        |    FP       |
 Status      (0)     |             |             |
