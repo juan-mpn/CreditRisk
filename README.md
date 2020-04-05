@@ -44,9 +44,8 @@ Finding that the data from LendingClub is imbalanced with 68,470 Low-Risk applic
                        Model Prediction 
                     No Default   |  Default (1) |
                         (0)      |              |
----
-`Actual              |             |             |
-Loan    no default  |   TN        |    FP       |`
+Actual              |             |             |
+Loan    no default  |   TN        |    FP       |
 Status      (0)     |             |             |
 ---
            default  |   FN        |    TP       |
