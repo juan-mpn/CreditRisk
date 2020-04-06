@@ -61,10 +61,10 @@ Status      (0)     |             |             |
            default  |   FN        |    TP       |
             (1)     |             |             |
 ---
-TN = True Negative
-FP = False Positive
-FN = False Negative
-TP = True Positive
+- TN = True Negative
++ FP = False Positive
+- FN = False Negative
++ TP = True Positive
 
 From the confusion matrix results, we can see a large number of false positives (28),  which indicates an unreliable positive classification. The recall is also low High-Risk = 0.72 and Low-Risk = 0.57 applications, which is indicative of the large number of false negatives. The F1 score is also low (0.72)
 
