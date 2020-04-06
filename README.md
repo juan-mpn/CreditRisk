@@ -49,7 +49,7 @@ Finding that the data from LendingClub is imbalanced with 68,470 Low-Risk applic
 ---
 ---
 **
-- - -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
                        Model Prediction 
                     No Default   |  Default (1) |
                         (0)      |              |
@@ -89,7 +89,7 @@ From the confusion matrix results, we can see a large number of false positives 
 **Balanced Accuracy Score: 0.644**
 From the confusion matrix results, we can see a large number of false positives (28),  which indicates an unreliable positive classification. The recall is also low High-Risk = 0.72 and Low-Risk = 0.57 applications, which is indicative of the large number of false negatives. The F1 score is also low (0.72) but **SMOTE F1 score 0.82  is also better than Combined Oversampling and Undersampling f1 0.72**
 
-# Ensemble Learners
+## Ensemble Learners
 **Balanced Random Forest Random Oversampler**
 + Low-Risk:  51,366
 - High-Risk: 51,366
@@ -104,7 +104,7 @@ From the confusion matrix results, we can see a large number of false positives 
 **Balanced Accuracy Score: 0.678**
 From the confusion matrix results, we can see a large number of false positives (65),  which indicates an unreliable positive classification. The recall is also low High-Risk = 0.36 and Low-Risk = 1.0 applications, which is indicative of the large number of false negatives. The F1 score is also low (1.0), it seems we have over fit this algorithm and requires further analysis.
 
-## For this particular analysis after executing Ensemble Learners, StandardScaler, Random Sampler, SMOTE Oversampler, Custer Centroids Undersampler and SMOTEENN Combined Sampler we find SMOTE Oversampler as the best Machine Learning algorithm providing the better results. This will require further analysis and more data but it is looking very promising. 
+## For this particular analysis after executing Ensemble Learners, StandardScaler, Random Sampler, SMOTE Oversampler, Cluster Centroids Undersampler and SMOTEENN Combined Sampler we find SMOTE Oversampler as the best Machine Learning algorithm providing the better results. This will require further analysis and more data but it is looking very promising. 
 
 
 
